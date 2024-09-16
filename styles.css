@@ -1,0 +1,76 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #0f1cdd;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  /* Style the input fields */
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style the submit button */
+  input[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    display: none; /* Initially hide all tables */
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Make the table responsive */
+  @media screen and (max-width: 600px) {
+    table, th, td {
+      width: 100%;
+      display: block;
+    }
+/* Style for the image container */
+#imageContainer {
+  text-align: left;  /* Align the image container to the left */
+  margin-left: 20px; /* Move the image slightly to the left */
+}
+
+/* Style for the image itself */
+#imageContainer img {
+  transition: transform 0.3s ease, margin-left 0.3s ease; /* Smooth transition */
+}
+/* Enlarge the image and move slightly left on hover */
+#imageContainer img:hover {
+  transform: scale(5.0);  /* Enlarge the image (100% bigger) */
+  margin-left: -100px;     /* Move the image slightly to the left */
+  margin-bottom: -100px;     /* Move the image slightly to the left */
+}
+
+  }
+  

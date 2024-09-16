@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SI-Bhora Kit- External Hex</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>External Hex Drilling Protocol Calculation Tool</h1>
+  
+  <!-- Input Form -->
+  <form id="inputForm">
+    <label for="value1">Enter Implant Diameter:</label><br>
+    <input type="number" id="value1" name="value1" placeholder="Enter Implant Diameter"><br><br>
+    
+    <label for="value2">Enter Implant Length:</label><br>
+    <input type="number" id="value2" name="value2" placeholder="Enter Implant Length"><br><br>
+    
+    <input type="button" value="Calculate Drilling Protocol" onclick="processForm()">
+  </form>
+
+  <!-- Tables (Initially Hidden) -->
+  <div id="tableContainer">
+    <!-- Table A -->
+    <table id="IP-8.5">
+      <tr>
+        <th>Step 1</th>
+        <th>Step 2</th>
+        <th>Step 3</th>
+        <th>Step 4</th>
+      </tr>
+      <tr>
+        <td>D-CP-BGN</td>
+        <td>D-20T-BG-6</td>
+        <td>D-20T-BG-8</td>
+        <td>Place Implant</td>
+      </tr>
+    </table>
+    <!-- Table B -->
+    <table id="IP-10">
+        <tr>
+          <th>Step 1</th>
+          <th>Step 2</th>
+          <th>Step 3</th>
+          <th>Step 4</th>
+          <th>Step 5</th>
+          <th>Step 6</th>
+        </tr>
+        <tr>
+          <td>D-CP-BGN</td>
+          <td>D-20T-BG-6</td>
+          <td>D-20T-BG-8</td>
+          <td>D-20T-BG-9</td>
+          <td>D-20T-BG-10</td>
+          <td>Place Implant</td>
+        </tr>
+      </table>
+      <!-- Table C -->
+      <table id="IP-11.5">
+        <tr>
+          <th>Step 1</th>
+          <th>Step 2</th>
+          <th>Step 3</th>
+          <th>Step 4</th>
+          <th>Step 5</th>
+          <th>Step 6</th>
+          <th>Step 7</th>
+        </tr>
+        <tr>
+          <td>D-CP-BGN</td>
+          <td>D-20T-BG-6</td>
+          <td>D-20T-BG-8</td>
+          <td>D-20T-BG-9</td>
+          <td>D-20T-BG-10</td>
+          <td>D-20T-BG-11</td>
+          <td>Place Implant</td>
+        </tr>
+      </table>
+      <!-- Table D -->
+      <table id="IP-13">
+            <tr>
+              <th>Step 1</th>
+              <th>Step 2</th>
+              <th>Step 3</th>
+              <th>Step 4</th>
+              <th>Step 5</th>
+              <th>Step 6</th>
+              <th>Step 7</th>
+              <th>Step 8</th>
+              <th>Step 9</th>
+            </tr>
+            <tr>
+              <td>D-CP-BGN</td>
+              <td>D-20T-BG-6</td>
+              <td>D-20T-BG-8</td>
+              <td>D-20T-BG-9</td>
+              <td>D-20T-BG-10</td>
+              <td>D-20T-BG-11</td>
+              <td>D-20T-BG-12</td>
+              <td>D-20T-BG-13</td>
+              <td>Place Implant</td>
+            </tr>
+      </table>
+      <!-- Table E -->
+      <table id="IP-15">
+        <tr>
+          <th>Step 1</th>
+          <th>Step 2</th>
+          <th>Step 3</th>
+          <th>Step 4</th>
+          <th>Step 5</th>
+          <th>Step 6</th>
+          <th>Step 7</th>
+          <th>Step 8</th>
+          <th>Step 9</th>
+          <th>Step 10</th>
+        </tr>
+        <tr>
+          <td>D-CP-BGN</td>
+          <td>D-20T-BG-6</td>
+          <td>D-20T-BG-8</td>
+          <td>D-20T-BG-9</td>
+          <td>D-20T-BG-10</td>
+          <td>D-20T-BG-11</td>
+          <td>D-20T-BG-12</td>
+          <td>D-20T-BG-13</td>
+          <td>D-20T-BG-16</td>
+          <td>Place Implant</td>
+        </tr>
+      </table>
+      <!-- Table F -->
+      <table id="IBN-8.5">
+            <tr>
+              <th>Step 1</th>
+              <th>Step 2</th>
+              <th>Step 3</th>
+              <th>Step 4</th>
+              <th>Step 5</th>
+
+            </tr>
+            <tr>
+              <td>D-CP-BGN</td>
+              <td>D-20T-BG-6</td>
+              <td>D-20T-BG-8</td>
+              <td>D-30TP-BG</td>
+              <td>Place Implant</td>
+            </tr>
+          </table>
+          <!-- Table G -->
+          <table id="IBN-10">
+              <tr>
+                <th>Step 1</th>
+                <th>Step 2</th>
+                <th>Step 3</th>
+                <th>Step 4</th>
+                <th>Step 5</th>
+                <th>Step 6</th>
+                <th>Step 7</th>
+              </tr>
+              <tr>
+                <td>D-CP-BGN</td>
+                <td>D-20T-BG-6</td>
+                <td>D-20T-BG-8</td>
+                <td>D-20T-BG-9</td>
+                <td>D-20T-BG-10</td>
+                <td>D-30TP-BG</td>
+                <td>Place Implant</td>
+              </tr>
+            </table>
+            <!-- Table H -->
+            <table id="IBN-11.5">
+              <tr>
+                <th>Step 1</th>
+                <th>Step 2</th>
+                <th>Step 3</th>
+                <th>Step 4</th>
+                <th>Step 5</th>
+                <th>Step 6</th>
+                <th>Step 7</th>
+                <th>Step 8</th>
+              </tr>
+              <tr>
+                <td>D-CP-BGN</td>
+                <td>D-20T-BG-6</td>
+                <td>D-20T-BG-8</td>
+                <td>D-20T-BG-9</td>
+                <td>D-20T-BG-10</td>
+                <td>D-20T-BG-11</td>
+                <td>D-30TP-BG</td>
+                <td>Place Implant</td>
+              </tr>
+            </table>
+            <!-- Table I -->
+            <table id="IBN-13">
+                  <tr>
+                    <th>Step 1</th>
+                    <th>Step 2</th>
+                    <th>Step 3</th>
+                    <th>Step 4</th>
+                    <th>Step 5</th>
+                    <th>Step 6</th>
+                    <th>Step 7</th>
+                    <th>Step 8</th>
+                    <th>Step 9</th>
+                    <th>Step 10</th>
+                  </tr>
+                  <tr>
+                    <td>D-CP-BGN</td>
+                    <td>D-20T-BG-6</td>
+                    <td>D-20T-BG-8</td>
+                    <td>D-20T-BG-9</td>
+                    <td>D-20T-BG-10</td>
+                    <td>D-20T-BG-11</td>
+                    <td>D-20T-BG-12</td>
+                    <td>D-20T-BG-13</td>
+                    <td>D-30TP-BG</td>
+                    <td>Place Implant</td>
+                  </tr>
+            </table>
+            <!-- Table J -->
+            <table id="IBN-15">
+              <tr>
+                <th>Step 1</th>
+                <th>Step 2</th>
+                <th>Step 3</th>
+                <th>Step 4</th>
+                <th>Step 5</th>
+                <th>Step 6</th>
+                <th>Step 7</th>
+                <th>Step 8</th>
+                <th>Step 9</th>
+                <th>Step 10</th>
+                <th>Step 11</th>
+              </tr>
+              <tr>
+                <td>D-CP-BGN</td>
+                <td>D-20T-BG-6</td>
+                <td>D-20T-BG-8</td>
+                <td>D-20T-BG-9</td>
+                <td>D-20T-BG-10</td>
+                <td>D-20T-BG-11</td>
+                <td>D-20T-BG-12</td>
+                <td>D-20T-BG-13</td>
+                <td>D-20T-BG-16</td>
+                <td>D-30TP-BG</td>
+                <td>Place Implant</td>
+              </tr>
+            </table>
+      <!-- Table K -->
+      <table id="IBT-8.5">
+        <tr>
+          <th>Step 1</th>
+          <th>Step 2</th>
+          <th>Step 3</th>
+          <th>Step 4</th>
+          <th>Step 5</th>
+          <th>Step 6</th>
+        </tr>
+        <tr>
+          <td>D-CP-BGN</td>
+          <td>D-20T-BG-6</td>
+          <td>D-20T-BG-8</td>
+          <td>D-30TP-BG</td>
+          <td>D-33TP-BG</td>
+          <td>Place Implant</td>
+        </tr>
+      </table>
+      <!-- Table L -->
+      <table id="IBT-10">
+          <tr>
+            <th>Step 1</th>
+            <th>Step 2</th>
+            <th>Step 3</th>
+            <th>Step 4</th>
+            <th>Step 5</th>
+            <th>Step 6</th>
+            <th>Step 7</th>
+            <th>Step 8</th>
+          </tr>
+          <tr>
+            <td>D-CP-BGN</td>
+            <td>D-20T-BG-6</td>
+            <td>D-20T-BG-8</td>
+            <td>D-20T-BG-9</td>
+            <td>D-20T-BG-10</td>
+            <td>D-30TP-BG</td>
+            <td>D-33TP-BG</td>
+            <td>Place Implant</td>
+          </tr>
+        </table>
+        <!-- Table M -->
+        <table id="IBT-11.5">
+          <tr>
+            <th>Step 1</th>
+            <th>Step 2</th>
+            <th>Step 3</th>
+            <th>Step 4</th>
+            <th>Step 5</th>
+            <th>Step 6</th>
+            <th>Step 7</th>
+            <th>Step 8</th>
+            <th>Step 9</th>
+          </tr>
+          <tr>
+            <td>D-CP-BGN</td>
+            <td>D-20T-BG-6</td>
+            <td>D-20T-BG-8</td>
+            <td>D-20T-BG-9</td>
+            <td>D-20T-BG-10</td>
+            <td>D-20T-BG-11</td>
+            <td>D-30TP-BG</td>
+            <td>D-33TP-BG</td>
+            <td>Place Implant</td>
+          </tr>
+        </table>
+        <!-- Table N -->
+        <table id="IBT-13">
+              <tr>
+                <th>Step 1</th>
+                <th>Step 2</th>
+                <th>Step 3</th>
+                <th>Step 4</th>
+                <th>Step 5</th>
+                <th>Step 6</th>
+                <th>Step 7</th>
+                <th>Step 8</th>
+                <th>Step 9</th>
+                <th>Step 10</th>
+                <th>Step 11</th>
+              </tr>
+              <tr>
+                <td>D-CP-BGN</td>
+                <td>D-20T-BG-6</td>
+                <td>D-20T-BG-8</td>
+                <td>D-20T-BG-9</td>
+                <td>D-20T-BG-10</td>
+                <td>D-20T-BG-11</td>
+                <td>D-20T-BG-12</td>
+                <td>D-20T-BG-13</td>
+                <td>D-30TP-BG</td>
+                <td>D-33TP-BG</td>
+                <td>Place Implant</td>
+              </tr>
+        </table>
+        <!-- Table O -->
+        <table id="IBT-15">
+          <tr>
+            <th>Step 1</th>
+            <th>Step 2</th>
+            <th>Step 3</th>
+            <th>Step 4</th>
+            <th>Step 5</th>
+            <th>Step 6</th>
+            <th>Step 7</th>
+            <th>Step 8</th>
+            <th>Step 9</th>
+            <th>Step 10</th>
+            <th>Step 11</th>
+            <th>Step 12</th>
+          </tr>
+          <tr>
+            <td>D-CP-BGN</td>
+            <td>D-20T-BG-6</td>
+            <td>D-20T-BG-8</td>
+            <td>D-20T-BG-9</td>
+            <td>D-20T-BG-10</td>
+            <td>D-20T-BG-11</td>
+            <td>D-20T-BG-12</td>
+            <td>D-20T-BG-13</td>
+            <td>D-20T-BG-16</td>
+            <td>D-30TP-BG</td>
+            <td>D-33TP-BG</td>
+            <td>Place Implant</td>
+          </tr>
+        </table>
+      <!-- Table P -->
+      <table id="BAT-8.5">
+        <tr>
+          <th>Step 1</th>
+          <th>Step 2</th>
+          <th>Step 3</th>
+          <th>Step 4</th>
+          <th>Step 5</th>
+          <th>Step 6</th>
+          <th>Step 7</th>
+          <th>Step 8</th>
+
+        </tr>
+        <tr>
+          <td>D-CP-BGN</td>
+          <td>D-20T-BG-6</td>
+          <td>D-20T-BG-8</td>
+          <td>D-30TP-BG</td>
+          <td>D-33TP-BG</td>
+          <td>D-35TP-BG</td>
+          <td>D-40TP-BG</td>
+          <td>Place Implant</td>
+        </tr>
+      </table>
+      <!-- Table Q -->
+      <table id="BAT-10">
+          <tr>
+            <th>Step 1</th>
+            <th>Step 2</th>
+            <th>Step 3</th>
+            <th>Step 4</th>
+            <th>Step 5</th>
+            <th>Step 6</th>
+            <th>Step 7</th>
+            <th>Step 8</th>
+            <th>Step 9</th>
+            <th>Step 10</th>
+          </tr>
+          <tr>
+            <td>D-CP-BGN</td>
+            <td>D-20T-BG-6</td>
+            <td>D-20T-BG-8</td>
+            <td>D-20T-BG-9</td>
+            <td>D-20T-BG-10</td>
+            <td>D-30TP-BG</td>
+            <td>D-33TP-BG</td>
+            <td>D-35TP-BG</td>
+            <td>D-40TP-BG</td>
+            <td>Place Implant</td>
+          </tr>
+        </table>
+        <!-- Table R -->
+        <table id="BAT-11.5">
+          <tr>
+            <th>Step 1</th>
+            <th>Step 2</th>
+            <th>Step 3</th>
+            <th>Step 4</th>
+            <th>Step 5</th>
+            <th>Step 6</th>
+            <th>Step 7</th>
+            <th>Step 8</th>
+            <th>Step 9</th>
+            <th>Step 10</th>
+            <th>Step 11</th>
+          </tr>
+          <tr>
+            <td>D-CP-BGN</td>
+            <td>D-20T-BG-6</td>
+            <td>D-20T-BG-8</td>
+            <td>D-20T-BG-9</td>
+            <td>D-20T-BG-10</td>
+            <td>D-20T-BG-11</td>
+            <td>D-30TP-BG</td>
+            <td>D-33TP-BG</td>
+            <td>D-35TP-BG</td>
+            <td>D-40TP-BG</td>
+            <td>Place Implant</td>
+          </tr>
+        </table>
+        <!-- Table S -->
+        <table id="BAT-13">
+              <tr>
+                <th>Step 1</th>
+                <th>Step 2</th>
+                <th>Step 3</th>
+                <th>Step 4</th>
+                <th>Step 5</th>
+                <th>Step 6</th>
+                <th>Step 7</th>
+                <th>Step 8</th>
+                <th>Step 9</th>
+                <th>Step 10</th>
+                <th>Step 11</th>
+                <th>Step 12</th>
+                <th>Step 13</th>
+              </tr>
+              <tr>
+                <td>D-CP-BGN</td>
+                <td>D-20T-BG-6</td>
+                <td>D-20T-BG-8</td>
+                <td>D-20T-BG-9</td>
+                <td>D-20T-BG-10</td>
+                <td>D-20T-BG-11</td>
+                <td>D-20T-BG-12</td>
+                <td>D-20T-BG-13</td>
+                <td>D-30TP-BG</td>
+                <td>D-33TP-BG</td>
+                <td>D-35TP-BG</td>
+                <td>D-40TP-BG</td>
+                <td>Place Implant</td>
+              </tr>
+        </table>
+        <!-- Table T -->
+        <table id="BAT-15">
+          <tr>
+            <th>Step 1</th>
+            <th>Step 2</th>
+            <th>Step 3</th>
+            <th>Step 4</th>
+            <th>Step 5</th>
+            <th>Step 6</th>
+            <th>Step 7</th>
+            <th>Step 8</th>
+            <th>Step 9</th>
+            <th>Step 10</th>
+            <th>Step 11</th>
+            <th>Step 12</th>
+            <th>Step 13</th>
+            <th>Step 14</th>
+          </tr>
+          <tr>
+            <td>D-CP-BGN</td>
+            <td>D-20T-BG-6</td>
+            <td>D-20T-BG-8</td>
+            <td>D-20T-BG-9</td>
+            <td>D-20T-BG-10</td>
+            <td>D-20T-BG-11</td>
+            <td>D-20T-BG-12</td>
+            <td>D-20T-BG-13</td>
+            <td>D-20T-BG-16</td>
+            <td>D-30TP-BG</td>
+            <td>D-33TP-BG</td>
+            <td>D-35TP-BG</td>
+            <td>D-40TP-BG</td>
+            <td>Place Implant</td>       
+          </tr>
+        </table>                                                  
+  </div>
+<!-- Image at the bottom -->
+<div id="imageContainer" style="text-align: center;">
+  <!-- Use an online image or a local one -->
+  <img src="Tray.PNG" alt="Farmiliarize with the Kit Tray" style="width: 300px;">
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
