@@ -3,7 +3,19 @@ body {
     font-family: Arial, sans-serif;
     padding: 20px;
   }
-  
+/* Logo container styling */
+#logoContainer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000; /* Ensures the logo stays on top of other elements */
+}
+
+/* Style the logo image */
+#logo {
+  width: 100px; /* Adjust the width of the logo */
+  height: auto; /* Maintain aspect ratio */
+}  
   h1 {
     color: #0f1cdd;
   }
@@ -63,13 +75,10 @@ body {
 
 /* Style for the image itself */
 #imageContainer img {
-  transition: transform 0.3s ease, margin-left 0.3s ease; /* Smooth transition */
-}
-/* Enlarge the image and move slightly left on hover */
-#imageContainer img:hover {
-  transform: scale(5.0);  /* Enlarge the image (100% bigger) */
-  margin-left: -100px;     /* Move the image slightly to the left */
-  margin-bottom: -100px;     /* Move the image slightly to the left */
+  transition: transform 1.5s ease, margin-left 1.5s ease; /* Smooth transition */
+  transform: scale(2.0);  /* Enlarge the image (100% bigger) */
+  margin-left: -50px;     /* Move the image slightly to the left */
+  margin-bottom: -500px;     /* Move the image slightly to the left */
 }
 
   }
